@@ -1,0 +1,35 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+bool compare(int a , int b)
+{
+    a<b;   //sort kyu nhi kr rha be???
+    
+}
+int main()
+{
+    vector <int>v;
+    v.reserve(1);
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int temp;
+        cin>>temp;
+        v.push_back(temp);
+
+    }
+    v.pop_back();//removes 3 since it is in the last
+    sort(v.begin(),v.end(),compare);
+    //v.clear();
+    cout<<v.capacity()<<endl;// op= 100 , as we reserved it .
+        for(int i=0;i<v.size();i++)
+        {
+            cout<<v[i]<<" ";
+        }
+
+        return 0;
+}
+
